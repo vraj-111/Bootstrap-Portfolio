@@ -1204,6 +1204,58 @@ ul, ol {
 /* ============================================================
    13. PROJECTS SECTION
    ============================================================ */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.project-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all var(--transition-base);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 212, 255, 0.2);
+}
+
+.project-card-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.project-card-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.project-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.project-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
 .project-showcase {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -1860,6 +1912,10 @@ ul, ol {
     .project-showcase {
         grid-template-columns: 1fr;
         gap: 36px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .contact-wrapper {
