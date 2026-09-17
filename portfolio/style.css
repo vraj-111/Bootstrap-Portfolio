@@ -1206,7 +1206,7 @@ ul, ol {
    ============================================================ */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 }
 
@@ -1220,6 +1220,7 @@ ul, ol {
     flex-direction: column;
     gap: 16px;
     transition: all var(--transition-base);
+    min-height: 320px;
 }
 
 .project-card:hover {
@@ -1254,6 +1255,7 @@ ul, ol {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.6;
+    flex-grow: 1;
 }
 
 .project-showcase {
@@ -1915,7 +1917,7 @@ ul, ol {
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .contact-wrapper {
@@ -1926,6 +1928,10 @@ ul, ol {
 @media (max-width: 768px) {
     .section {
         padding: 60px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .nav-links {
