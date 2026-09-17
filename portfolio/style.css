@@ -1285,11 +1285,19 @@ ul, ol {
 }
 
 .browser-preview {
-    padding: 48px 24px;
+    padding: 0;
     min-height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.project-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .project-placeholder {
