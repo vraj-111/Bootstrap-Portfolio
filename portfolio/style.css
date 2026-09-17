@@ -1209,6 +1209,7 @@ ul, ol {
     grid-template-columns: 1.2fr 1fr;
     gap: 48px;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 .project-browser {
